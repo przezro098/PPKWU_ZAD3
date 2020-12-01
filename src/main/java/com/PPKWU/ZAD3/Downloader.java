@@ -45,8 +45,9 @@ public class Downloader {
             calendar.set(Integer.parseInt(year),Integer.parseInt(month),Integer.parseInt(day));
 
             VEvent vEvent = new VEvent();
-            vEvent.setSummary(name);
-            vEvent.setDateTimeStamp(calendar.getTime());
+            //vEvent.setDateTimeStamp(calendar.getTime());
+            vEvent.setDateStart(calendar.getTime());
+            vEvent.setDateEnd(calendar.getTime());
 
             iCalendar.addEvent(vEvent);
 
