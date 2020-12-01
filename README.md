@@ -14,3 +14,7 @@ To use please:
 2) make sure that project is running
 3) type in your browser "http://localhost:8080/calendar/{year}/{month}"
 4) data will be returned as a iCS file.
+
+Case of usages : 
+1) Typing http://localhost:8080/calendar/2020/10 will return a string which contains events from October and it can be saved as .ics file.
+2) Typing http://localhost:8080/calendar/2020/03 will return a string which contains events from March and it can be saved as .ics file.
