@@ -22,7 +22,7 @@ public class Downloader {
         //OBSOLETE
         //List<String> events = new ArrayList<>();
         Connection connection = Jsoup.connect("http://www.weeia.p.lodz.pl/pliki_strony_kontroler/kalendarz.php"
-                                              + "?rok=" + year +"?month=" + month);
+                                              + "?rok=" + year +"&miesiac=" + month);
 
         Elements days = connection.get().select("a.active");
         Elements eventNames = connection.get().select("div.InnerBox");
