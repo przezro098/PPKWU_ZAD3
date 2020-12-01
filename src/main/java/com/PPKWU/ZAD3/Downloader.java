@@ -1,5 +1,6 @@
 package com.PPKWU.ZAD3;
 
+import biweekly.Biweekly;
 import biweekly.ICalendar;
 import biweekly.component.VEvent;
 import org.jsoup.Connection;
@@ -17,7 +18,7 @@ import java.util.List;
 
 @Service
 public class Downloader {
-    public List<String> Download(String year, String month) throws IOException {
+    public String Download(String year, String month) throws IOException {
         //OBSOLETE
         //List<String> events = new ArrayList<>();
         Connection connection = Jsoup.connect("http://www.weeia.p.lodz.pl/pliki_strony_kontroler/kalendarz.php"
@@ -51,8 +52,6 @@ public class Downloader {
 
         }
 
-
-
-        return ;
+        return Biweekly.write(iCalendar).go();
     }
 }
